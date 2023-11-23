@@ -1,0 +1,87 @@
+.outcard {
+    padding: 20px;
+    margin-left: 22%;
+    margin-top: 2%;
+    width: 50%;
+    border-radius: 5px;
+    border: 3px solid blueviolet;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 8px 16px rgba(182, 104, 104, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .outcard:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .inputs {
+    width: 95%;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 10px;
+    margin: 5px;
+  }
+  
+  .outcard>h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-weight: bolder;
+  }
+
+  .btns {
+    background-color: #0050b1;
+    color: #fff;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .btns:active {
+    transform: translateY(2px);
+  }
+
+  .card-home{
+    box-shadow: 10px 8px 16px rgba(143, 42, 42, 0.4);
+    background-color: rgb(220,220,220);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logout>span{
+    color: rgb(166, 5, 5);
+  }
+  @media (max-width: 767px){
+    .card-home{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logout{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .outcard {
+      width: 80%;
+      margin-left: 9%;
+    }
+    .btn-primary{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .signup{
+    color: green;
+  }
