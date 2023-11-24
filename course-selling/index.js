@@ -8,6 +8,13 @@ const paymentController = require("./controller/paymentController");
 const PORT=process.env.PORT;
 
 const app = express();
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
