@@ -13,7 +13,7 @@ function NewSubmit() {
   const handleSubmit = () => {
     console.log(otp, password);
     axios
-      .post("http://course-selling.ap-south-1.elasticbeanstalk.com/submit-otp", {
+      .post("https://course-selling-app-l3qo.vercel.app/submit-otp", {
         otp: otp,
         password: password,
       })
