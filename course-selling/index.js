@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
   
 mongoose
-  .connect(mongodb+srv://Rishab_123:Rishab_123@mern.wilxs9b.mongodb.net/, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
