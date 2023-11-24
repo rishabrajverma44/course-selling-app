@@ -15,7 +15,7 @@ app.use(cors(
         credentials: true
     }
 ));
-
+app.use(express.json());
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 // Specify the views directory
