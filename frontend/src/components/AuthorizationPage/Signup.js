@@ -47,7 +47,7 @@ function Signup() {
     e.preventDefault();
     if (validateForm()) {
       axios
-        .post("https://course-selling-app-l3qo.vercel.app/signup", {
+        .post("https://course-selling-app-l3qo-7xam1ycxt-rishabrajverma44.vercel.app/signup", {
           email: email,
           password: password,
           name: name,
