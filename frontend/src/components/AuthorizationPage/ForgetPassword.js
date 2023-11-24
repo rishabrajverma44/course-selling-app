@@ -28,7 +28,7 @@ function ForgetPassword() {
     if (validateForm()) {
       console.log(email);
       axios
-        .post("http://course-selling.ap-south-1.elasticbeanstalk.com/send-otp", {
+        .post("https://course-selling-app-l3qo.vercel.app/send-otp", {
           email: email,
         })
         .then((res) => {
