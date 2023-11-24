@@ -9,6 +9,15 @@ const PORT=process.env.PORT;
 
 const app = express();
 
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+app.use(express.json())
+
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 // Specify the views directory
