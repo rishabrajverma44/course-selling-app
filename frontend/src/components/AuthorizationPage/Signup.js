@@ -47,7 +47,7 @@ function Signup() {
     e.preventDefault();
     if (validateForm()) {
       axios
-        .post("http://course-selling.ap-south-1.elasticbeanstalk.com/signup", {
+        .post("https://course-selling-app-l3qo.vercel.app/signup", {
           email: email,
           password: password,
           name: name,
