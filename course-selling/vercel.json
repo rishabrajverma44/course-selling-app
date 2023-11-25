@@ -1,12 +1,14 @@
 {
-    "version":2,
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-    ],
-    "routes": [
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
         {
-          "src": "/(.*)",
-          "dest": "/"
-        }
-    ]
-  }
+          key: 'Access-Control-Allow-Origin',
+          value: 'https://your-vercel-app-url.vercel.app',
+        },
+        // Add other necessary headers
+      ],
+    },
+  ],
+}
