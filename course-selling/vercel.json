@@ -5,7 +5,7 @@
       "headers": [
         {
           key: 'Access-Control-Allow-Origin',
-          value: 'https://your-vercel-app-url.vercel.app',
+          value: 'https://https://course-selling-app-six.vercel.app',
         },
       ],
     },
