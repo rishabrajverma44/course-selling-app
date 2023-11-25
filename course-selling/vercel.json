@@ -7,7 +7,6 @@
           key: 'Access-Control-Allow-Origin',
           value: 'https://your-vercel-app-url.vercel.app',
         },
-        // Add other necessary headers
       ],
     },
   ],
