@@ -12,7 +12,8 @@ app.use(cors(
     {
         origin: ["https://course-selling-app-six.vercel.app/"],
         methods: ["POST", "GET"],
-        credentials: true
+        credentials: true,
+        optionsSuccessStatus: 204,
     }
 ));
 app.use(express.json());
