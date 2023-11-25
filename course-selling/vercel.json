@@ -1,13 +1,12 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
+    "version":2,
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
         {
-          key: 'Access-Control-Allow-Origin',
-          value: 'https://https://course-selling-app-six.vercel.app',
-        },
-      ],
-    },
-  ],
-}
+          "src": "/(.*)",
+          "dest": "/"
+        }
+    ]
+  }
