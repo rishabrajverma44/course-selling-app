@@ -9,6 +9,7 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr]=useState("");
+  axios.defaults.withCredentials = true;
 
   const handleSubmit = () => {
     axios
