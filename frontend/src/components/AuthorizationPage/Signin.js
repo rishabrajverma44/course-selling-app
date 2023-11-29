@@ -13,7 +13,7 @@ function Signin() {
 
   const handleSubmit = () => {
     axios
-      .post("https://course-selling.ap-south-1.elasticbeanstalk.com/signin", {
+      .post("http://course-selling.ap-south-1.elasticbeanstalk.com/signin", {
         email: email,
         password: password,
       })
