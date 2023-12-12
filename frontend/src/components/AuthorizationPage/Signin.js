@@ -13,7 +13,7 @@ function Signin() {
 
   const handleSubmit = () => {
     axios
-      .post("https://course-selling.ap-south-1.elasticbeanstalk.com/signin", {
+      .post("https://course-selling-app-1jpl-rishabrajverma44.vercel.app/signin", {
         email: email,
         password: password,
       })
