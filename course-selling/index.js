@@ -13,7 +13,7 @@ app.use(cors(
         origin: ["https://course-selling-app-six.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true,
-        optionsSuccessStatus: 204,
+        optionsSuccessStatus: 200,
     }
 ));
 app.use(express.json());
