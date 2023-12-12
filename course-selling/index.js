@@ -22,7 +22,6 @@ app.set('view engine', 'ejs');
 // Specify the views directory
 app.set('views','./views');
 
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
