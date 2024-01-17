@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Frontend from "./Frontend";
 import { useState } from "react";
+import { url } from "../../Backend-url";
 
 const Payment = ({ amount }) => {
   const email = localStorage.getItem("EMAIL");
@@ -19,12 +20,13 @@ const Payment = ({ amount }) => {
       order_id: data.id,
       handler: function (response) {
         axios
-          .post("http://course-selling.ap-south-1.elasticbeanstalk.com/verify", { response: response })
+          .post(url+"/verify", { response: response })
           .then((res) => {
             if(res.data.code===200)
             {
               setErr("Congrats We received Your Payment")
               console.log("payment done")
+              alert("Payment done.")
             }  
           })
           .catch((err) => {
@@ -43,7 +45,7 @@ const Payment = ({ amount }) => {
   const handlePayment = (amount) => {
     const _data = { amount: amount, email: email};
     axios
-      .post("http://course-selling.ap-south-1.elasticbeanstalk.com/orders", _data)
+      .post(url+"/orders", _data)
       .then((res) => {
         if (res.data.code === 404) {
           setErr("Your Payment Already Done !")
