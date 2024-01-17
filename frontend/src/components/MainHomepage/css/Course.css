@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  .img-responsive{
+    max-width: 100%;
+    height: auto;
+  }
+  .course{
+    padding: 5%;
+    margin: 2%;  
+  }
