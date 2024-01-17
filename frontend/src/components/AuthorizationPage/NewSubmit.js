@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import NavBar from "../NavBar";
 import "./Authorization.css";
+import { url } from "../../Backend-url";
 
 function NewSubmit() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function NewSubmit() {
   const handleSubmit = () => {
     console.log(otp, password);
     axios
-      .post("https://course-selling-app-l3qo.vercel.app/submit-otp", {
+      .post(url+"/submit-otp", {
         otp: otp,
         password: password,
       })
