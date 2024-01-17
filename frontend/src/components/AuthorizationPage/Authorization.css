@@ -1,87 +1,189 @@
+span {
+  font-family: 'Caveat', cursive;
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
 .outcard {
-    padding: 20px;
-    margin-left: 22%;
-    margin-top: 2%;
-    width: 50%;
-    border-radius: 5px;
-    border: 3px solid blueviolet;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 10px 8px 16px rgba(182, 104, 104, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  padding: 10px;
+  margin-left: 22%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 50%;
+  border-radius: 5px;
+  border: 3px solid blueviolet;
+  backdrop-filter: blur(80px);
+  border-radius: 10px;
+  box-shadow: 10px 8px 16px rgba(182, 104, 104, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.outcard:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+}
+
+.inputs {
+  width: 95%;
+  color: black;
+  background-color: rgb(240, 236, 234);
+  border: none;
+  border-radius: 13px;
+  padding: 20px 10px;
+  margin: 5px;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.outcard>h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-weight: bolder;
+}
+
+.container-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: #fff;
+}
+
+.btns {
+  letter-spacing: 2px;
+  margin-top: 10px;
+  font-size: xx-large;
+  font-family: "poppins";
+  background-color: orangered;
+  color: #fff;
+  width: 50%;
+  padding: 7px 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btns:active {
+  transform: translateY(2px);
+  background-color: rgb(0, 94, 255);
+}
+
+.btns:hover {
+  color: rgb(48, 41, 41);
+  box-shadow: 3px 3px 25px rgb(214, 28, 28);
+}
+.x {
+  width: 30%;
+  padding: 0%;
+  font-size: medium;
+}
+
+
+.logout>span {
+  color: rgb(166, 5, 5);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+.signup {
+  color: green;
+}
+
+.main-container {
+  width: 100vw;
+  min-height: 90vh;
+  z-index: 0;
+  position: relative;
+  background-color: rgb(171, 232, 235);
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.circle1{
+  background-color: chocolate;
+  height: 20vw;
+  width: 20vw;
+  border-radius: 100%;
+  margin-left: 15%;
+}
+.circle2 {
+  background-color: rgb(250, 150, 0);
+  height: 20vw;
+  width: 20vw;
+  border-radius: 100%;
+  margin-left: 60%;
+  margin-top: 5vh;
+}
+
+
+.navbar-home{
+  background-color: rgb(250, 150, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(89, 56, 93);
+  padding: 10px;
+}
+
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: x-large;
   }
-  .outcard:hover {
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
-  }
-  
   .inputs {
-    width: 95%;
-    color: #444;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 10px 10px;
-    margin: 5px;
+    font-size: large;
   }
-  
-  .outcard>h1{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-weight: bolder;
+  .outcard {
+    width: 80%;
+    margin-left: 8%;
+    backdrop-filter: none;
   }
 
   .btns {
-    background-color: #0050b1;
-    color: #fff;
     width: 100%;
-    padding: 10px 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .btns:active {
-    transform: translateY(2px);
+    padding: 1%;
   }
 
-  .card-home{
-    box-shadow: 10px 8px 16px rgba(143, 42, 42, 0.4);
-    background-color: rgb(220,220,220);
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .x {
+    width: 80%;
+    padding: 0%;
+    font-size: 15px;
   }
-  .logout>span{
-    color: rgb(166, 5, 5);
+  .circle1,.circle2{
+   height: 250px;
+   width: 250px;
   }
-  @media (max-width: 767px){
-    .card-home{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .logout{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .outcard {
-      width: 80%;
-      margin-left: 9%;
-    }
-    .btn-primary{
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
+  .circle1{
+    margin-left: -75px;
+    margin-top: -75px;
   }
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    font-weight: bold;
+  .navbar-home{
+    flex-direction: column;
   }
-  .signup{
-    color: green;
+  .dashboard{
+    margin-top: 15px;
   }
+}
