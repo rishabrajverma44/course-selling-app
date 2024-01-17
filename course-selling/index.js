@@ -8,44 +8,16 @@ const paymentController = require("./controller/paymentController");
 const PORT=process.env.PORT;
 
 const app = express();
-// app.use(cors(
-//     {
-//         origin: ["http://localhost:3000"],
-//         methods: ["POST", "GET"],
-//         credentials: true,
-//         optionsSuccessStatus: 200,
-//     }
-// ));
-// app.options('*', cors());
-
-const allowCors = (fn) => async (req, res) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://react-e-commerce-kappa.vercel.app"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-  );
-  if (req.method === "OPTIONS") {
-    res.status(204).end();
-    return;
-  }
-  return await fn(req, res);
-};
 app.use(cors(
     {
-        origin: ["http://localhost:3000"],
+        origin: ["https://frontend-50e2.onrender.com"],
         methods: ["POST", "GET"],
         credentials: true,
         optionsSuccessStatus: 200,
     }
 ));
 app.options('*', cors());
+
 
 
 
