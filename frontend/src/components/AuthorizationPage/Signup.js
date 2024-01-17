@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
 import "./Authorization.css";
+import { url } from "../../Backend-url";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -47,7 +48,7 @@ function Signup() {
     e.preventDefault();
     if (validateForm()) {
       axios
-        .post("https://course-selling-app-l3qo-7xam1ycxt-rishabrajverma44.vercel.app/signup", {
+        .post(url+"/signup", {
           email: email,
           password: password,
           name: name,
