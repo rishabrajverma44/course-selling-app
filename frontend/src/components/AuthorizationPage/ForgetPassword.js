@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import NavBar from "../NavBar";
 import "./Authorization.css";
+import { url } from "../../Backend-url";
 
 function ForgetPassword() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function ForgetPassword() {
     if (validateForm()) {
       console.log(email);
       axios
-        .post("https://course-selling-app-l3qo.vercel.app/send-otp", {
+        .post(url+"/send-otp", {
           email: email,
         })
         .then((res) => {
