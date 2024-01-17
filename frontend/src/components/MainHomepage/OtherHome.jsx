@@ -1,8 +1,8 @@
 import React from "react";
 import NavBar from "../NavBar";
 import "./css/OtherHome.css";
-import course_1 from "../image/imageone.jpg"
-import course_2 from "../image/imagetwo.jpg"
+import course_1 from "../image/Sandy_Tech-14_Single-01.jpg"
+import course_2 from "../image/382602-PCH43P-550.jpg"
 import company_1 from "../image/company_1.png"
 import company_2 from "../image/company_2.jpg"
 import company_3 from "../image/company_3.jpg"
