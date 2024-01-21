@@ -29,20 +29,22 @@ module.exports.signup = async (req, res) => {
       notifier.notify({ title: "Alert!", message: "Email already exists" });
       res.send({ code: 500, message: "Email already exists" });
     } else {
-      //save data
+
+      try {
+        const user = await UserModel.findOne({ email: req.body.email });
+        const user_id = user._id;
+        sendVerifyMail(req.body.name, req.body.email, user_id);
+
+         //save data
       await newUser
         .save()
         .then()
         .catch((err) => {
           console.log("error in saving data" + err);
         });
-
-      try {
-        const user = await UserModel.findOne({ email: req.body.email });
-        const user_id = user._id;
-        sendVerifyMail(req.body.name, req.body.email, user_id);
+        
       } catch (error) {
-        console.log("user not found with this email " + error);
+        console.log("error in sending or saving  " + error);
       }
 
       res.send({ code: 200, message: "Signup success" });
