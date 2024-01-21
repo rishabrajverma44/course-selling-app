@@ -61,7 +61,7 @@ const sendVerifyMail = async (name, email, user_id) => {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
-      secure: false,
+      secure: true,
       requireTLS: true,
       auth: {
         user: process.env.EMAIL_SEVICE,
@@ -79,13 +79,17 @@ const sendVerifyMail = async (name, email, user_id) => {
       subject: "for verification mail",
       html: processedHtmlTemplate,
     };
-console.log("this part is done");
-    await transporter.sendMail(mailOptions, function (err, info) {
-      if (err) {
-        console.log("eroor in sending verification mail" + err);
-      } else {
-        console.log("verification Email has been sent : ");
-      }
+
+
+    try {
+  const info = await transporter.sendMail(mailOptions);
+  console.log("Verification Email has been sent: ", info);
+} catch (error) {
+  console.log("Error in sending verification mail: ", error.message);
+}
+
+
+    
     });
     
   } catch (error) {
