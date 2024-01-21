@@ -78,7 +78,7 @@ const sendVerifyMail = async (name, email, user_id) => {
       subject: "for verification mail",
       html: processedHtmlTemplate,
     };
-
+console.log("this part is done");
     await transporter.sendMail(mailOptions, function (err, info) {
       if (err) {
         console.log("eroor in sending verification mail" + err);
