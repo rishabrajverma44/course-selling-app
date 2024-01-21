@@ -30,7 +30,7 @@ module.exports.signup = async (req, res) => {
       res.send({ code: 500, message: "Email already exists" });
     } else {
 
-             //save data to create and track user_id
+             //save data to create and track user_id for sending mail
       await newUser
         .save()
         .then()
@@ -39,6 +39,7 @@ module.exports.signup = async (req, res) => {
         });
 
       try {
+        let user = await UserModel.findOne({ email: req.body.email });
         const user_id = user._id;
         await sendVerifyMail(req.body.name, req.body.email, user_id);
 
