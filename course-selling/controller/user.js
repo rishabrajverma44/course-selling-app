@@ -25,10 +25,11 @@ module.exports.signup = async (req, res) => {
   // email should not exist alreday
   try {
     let user = await UserModel.findOne({ email: req.body.email });
-    if (user) {
-      notifier.notify({ title: "Alert!", message: "Email already exists" });
-      res.send({ code: 500, message: "Email already exists" });
-    } else {
+    // if (user) {
+    //   notifier.notify({ title: "Alert!", message: "Email already exists" });
+    //   res.send({ code: 500, message: "Email already exists" });
+    // } else 
+    {
 
              //save data to create and track user_id for sending mail
       await newUser
