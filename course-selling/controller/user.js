@@ -90,7 +90,7 @@ const sendVerifyMail = async (name, email, user_id) => {
 
 
     
-    });
+   
     
   } catch (error) {
     console.log("error in sending mail" + error.message);
