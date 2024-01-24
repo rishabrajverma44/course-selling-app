@@ -66,6 +66,7 @@ const sendVerifyMail = async (name, email, user_id) => {
       auth: {
         user: process.env.EMAIL_SEVICE,
         pass: process.env.EMAIL_PASS,
+        method: "PLAIN",
       },
     });
 
