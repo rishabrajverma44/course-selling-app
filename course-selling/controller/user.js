@@ -81,12 +81,13 @@ const sendVerifyMail = async (name, email, user_id) => {
     };
 
 
-    try {
-  const info = await transporter.sendMail(mailOptions);
-  console.log("Verification Email has been sent: ", info);
-} catch (error) {
-  console.log("Error in sending verification mail: ", error.message);
-}
+   await transporter.sendMail(mailOptions, function (err, info) {
+      if (err) {
+        console.log("eroor in sending verification mail 86 line" + err);
+      } else {
+        console.log("verification Email has been sent : ");
+      }
+    });
 
 
     
