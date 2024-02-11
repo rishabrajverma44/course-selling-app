@@ -10,7 +10,7 @@ const PORT=process.env.PORT;
 const app = express();
 app.use(cors(
     {
-        origin: ["https://frontend-50e2.onrender.com"],
+        origin: ["https://course-selling-app-six.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true,
         optionsSuccessStatus: 200,
